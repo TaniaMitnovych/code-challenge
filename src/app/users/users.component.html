@@ -1,0 +1,14 @@
+<div class="user__container">
+  <nav class="navigation">
+    <a class="nav-link" routerLink="/saved-users">Saved users</a>
+  </nav>
+  <ul class="user-list" *ngIf="users; else elseBlock">
+    <li *ngFor="let user of users" class="user-item">
+      <app-user-details [userData]="user"></app-user-details>
+    </li>
+  </ul>
+  <ng-template #elseBlock>
+    <div class="spinner">
+    </div>
+  </ng-template>
+</div>
