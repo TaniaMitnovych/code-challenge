@@ -7,7 +7,6 @@ import { SavedUsersComponent } from './saved-users/saved-users.component';
 const routes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full' },
   { path: 'users', component: UsersComponent },
-  { path: 'weather', component: WeatherComponent },
   { path: 'saved-users', component: SavedUsersComponent },
 ];
 
