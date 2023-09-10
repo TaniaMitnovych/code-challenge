@@ -1,0 +1,15 @@
+<button class="back__button" (click)="goBack()">
+  <img src="../../assets/icons/arrow_back.svg" alt="go back"/>
+</button>
+<div *ngIf="users.length; else elseBlock" class="user__container">
+  <ul class="user-list">
+    <li *ngFor="let user of users" class="user-item">
+      <app-user-details [userData]="user"></app-user-details>
+    </li>
+  </ul>
+</div>
+<ng-template #elseBlock>
+  <div class="user__container user__container_empty">
+    There are no saved users
+  </div>
+</ng-template>
