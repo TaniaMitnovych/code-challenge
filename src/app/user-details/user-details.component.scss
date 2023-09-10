@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,100&display=swap');
+.user-card {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.user-info {
+  width: 70%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px auto;
+  grid-template-rows: 72px 1fr 1fr 1fr;
+  color: #1A283F;
+  margin-right: 20px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-photo__container {
+  float: left;
+  margin-right: 20px;
+
+  &>img {
+    border-radius: 50%;
+  }
+}
+
+.save-info__button {
+  border:none;
+  padding: 10px 15px;
+  background-color: #1A283F;
+  color:#ffffff;
+  font-family: 'Montserrat', sans-serif;
+  cursor:pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  grid-column: 1/3;
+  &:hover{
+    background-color: #2C456C;
+  }
+}
+
+.user-name {
+  font-size: 26px;
+  margin-left: 20px;
+  align-self: center;
+}
+
+.user-gender {
+  font-size: 16px;
+  opacity: 0.6;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.user-location,
+.user-email {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  &>img{
+    margin-right: 5px;
+  }
+}
+.user-email{
+  margin-bottom:10px;
+}
+@media (max-width:730px){
+  .user-card{
+    flex-direction: column;
+  }
+  .user-info{
+    width: 100%;
+  }
+  .user-name{
+    font-size: 20px;
+  }
+}
+@media (max-width:500px){
+  .user-info{
+    display: flex;
+    flex-direction: column;
+  }
+  .user-photo__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+  }
+  .user-name{
+    text-align: center;
+  }
+}

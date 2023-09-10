@@ -1,0 +1,30 @@
+<div *ngIf="userData" class="user-card">
+  <div class="user-info">
+    <div class="user-photo__container">
+      <img src="{{userData.results[0].picture.medium}}" alt="photo of {{userData.results[0].name.title}}
+    {{userData.results[0].name.first}}
+    {{userData.results[0].name.last}}" />
+    </div>
+    <h2 class="user-name">
+      {{userData.results[0].name.title}}
+      {{userData.results[0].name.first}}
+      {{userData.results[0].name.last}},
+      <span class="user-gender">{{userData.results[0].gender}}</span>
+    </h2>
+
+    <div class="user-location">
+      <img src="../../assets/icons/location.svg" alt="location" />
+      {{userData.results[0].location.city}},
+      {{userData.results[0].location.country}}
+    </div>
+    <div class="user-email">
+      <img src="../../assets/icons/mail.svg" alt="email" />
+      {{userData.results[0].email}}
+    </div>
+    <button *ngIf="location.path()==='/users'" (click)="saveUser(userData)" class="save-info__button">
+      Save data
+    </button>
+  </div>
+  <app-weather [coordinates]="userData.results[0].location.coordinates"></app-weather>
+  <app-map [coordinates]="userData.results[0].location.coordinates" [marker]="userData.results[0].picture.thumbnail"></app-map>
+</div>
