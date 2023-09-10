@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,100&display=swap');
+
+.weather{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #1A283F;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin-right: 20px;
+  &:hover{
+    background-color: #C0D1DA;
+  }
+}
+.temperature{
+  align-self: center;
+  justify-self:center;
+  font-size: 26px;
+  white-space:nowrap;
+}
+.day-temperature{
+  justify-self:center;
+  text-align: center;
+  line-height: 1.3;
+}
+.weather-icon{
+  &>img{
+    width:100%;
+  }
+}
+
+@media (max-width:1000px){
+  .weather-icon,
+  .temperature {
+    grid-column: 1/3;
+  }
+  .temperature{
+    margin-bottom: 15px;
+  }
+
+}
+@media(max-width:800px){
+  .temperature{
+    font-size: 20px;
+  }
+}
+@media (max-width:730px){
+  .weather{
+    margin-top: 20px;
+    height: 20%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .weather-icon{
+    grid-column: 1;
+  }
+  .temperature{
+    grid-column: 2;
+  }
+
+}

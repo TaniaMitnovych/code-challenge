@@ -1,0 +1,15 @@
+<div *ngIf="forecast" class="weather">
+  <div class="weather-icon">
+    <img [src]="weatherIcon"/>
+  </div>
+  <span class="temperature">
+    {{forecast.current_weather.temperature}}
+    {{forecast.hourly_units.temperature_2m}}
+  </span>
+  <p class="day-temperature min-temperature">
+    Min: {{forecast.daily.temperature_2m_min[0]}}
+  </p>
+  <p class="day-temperature max-temperature">
+    Max: {{forecast.daily.temperature_2m_max[0]}}
+  </p>
+</div>
